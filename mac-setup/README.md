@@ -1,4 +1,4 @@
-# Dotfiles
+# Mac setup
 
 Clean Mac dev setup: **Oh My Zsh**, **nvm**, **Cursor**, **Docker Desktop**, and CLI tools. No iTerm2 — use Cursor’s terminal (or any terminal).
 
@@ -10,7 +10,7 @@ Clean Mac dev setup: **Oh My Zsh**, **nvm**, **Cursor**, **Docker Desktop**, and
 - **Cursor** (main IDE + terminal)
 - **Docker Desktop**
 - Flycut, autojump, fzf, bat, eza, ripgrep
-- One **dotfiles repo** as the single source of truth
+- This **setup** directory as the single source of truth
 - A **`doctor`** command to verify everything
 
 ---
@@ -23,21 +23,21 @@ xcode-select --install
 
 ---
 
-## 1. Clone this repo
+## 1. Get the setup
 
-Clone to any directory (e.g. `~/dotfiles` or `~/Documents/developer/dotfiles`):
+`mac-setup` lives in the [project-initiator](https://github.com/yangj56/project-initiator) repo. Clone it if you do not already have it:
 
 ```bash
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/yangj56/project-initiator.git
+cd project-initiator/mac-setup
 ```
 
 ---
 
-## 2. Repo structure
+## 2. Layout
 
 ```
-dotfiles/
+mac-setup/
 ├── Brewfile
 ├── bootstrap.sh
 ├── install.sh
@@ -60,7 +60,7 @@ dotfiles/
 
 ## 3. Run setup
 
-From the repo directory:
+From `mac-setup`:
 
 ```bash
 chmod +x bootstrap.sh install.sh
@@ -84,8 +84,7 @@ doctor
 Edit it and set your name and email:
 
 ```bash
-# Open the file (path depends on where you cloned the repo)
-cursor ~/dotfiles/config/git/gitconfig
+cursor config/git/gitconfig
 ```
 
 Uncomment and set:
@@ -141,8 +140,8 @@ On a fresh MacBook:
 
 ```bash
 xcode-select --install
-git clone https://github.com/YOUR_USERNAME/dotfiles.git ~/dotfiles
-cd ~/dotfiles
+git clone https://github.com/yangj56/project-initiator.git
+cd project-initiator/mac-setup
 ./bootstrap.sh
 ./install.sh
 exec zsh
