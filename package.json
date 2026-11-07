@@ -1,8 +1,20 @@
 {
   "name": "project-initiator",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Scaffold a Next.js app on Vercel with Tailwind, shadcn, Drizzle, Postgres, S3, Playwright, k6, Zod, and agent git guards.",
+  "license": "MIT",
   "type": "module",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yangj56/project-initiator.git"
+  },
+  "homepage": "https://github.com/yangj56/project-initiator#readme",
+  "bugs": {
+    "url": "https://github.com/yangj56/project-initiator/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "bin": {
     "project-initiator": "./src/cli.mjs"
   },
@@ -18,7 +30,8 @@
     "node": ">=24"
   },
   "scripts": {
-    "test": "vitest run"
+    "test": "vitest run",
+    "prepublishOnly": "npm test"
   },
   "devDependencies": {
     "vitest": "^5.0.5",
