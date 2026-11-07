@@ -1,0 +1,74 @@
+[user]
+	name = yj
+	email = yangjing.yj56@gmail.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = cursor --wait
+	excludesfile = ~/.gitignore_global
+
+[pull]
+	rebase = true
+[safe]
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest
+	directory = /Users/admin/actions-runner/_work/photo-contest/photo-contest

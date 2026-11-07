@@ -1,0 +1,38 @@
+export ZSH="$HOME/.oh-my-zsh"
+ZSH_THEME="robbyrussell"
+plugins=(git)
+
+source "$ZSH/oh-my-zsh.sh"
+
+# Resolve DOTFILES from this file's location (symlink-safe)
+_zshrc="${${(%):-%N}:A}"
+export DOTFILES="${_zshrc:h:h:h}"
+unset _zshrc
+
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+else
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+
+source "$DOTFILES/config/zsh/exports.zsh"
+source "$DOTFILES/config/zsh/aliases.zsh"
+source "$DOTFILES/config/zsh/plugins.zsh"
+
+[[ -f "$HOME/.zshrc.private" ]] && source "$HOME/.zshrc.private"
+
+# opencode (optional)
+[[ -d "$HOME/.opencode/bin" ]] && export PATH="$HOME/.opencode/bin:$PATH"
+
+# .NET 10
+export DOTNET_ROOT="${HOMEBREW_PREFIX:-/opt/homebrew}/opt/dotnet/libexec"
+export PATH="$DOTNET_ROOT:$PATH"
+
+# uv / pipx user tools (optional)
+[[ -f "$HOME/.local/bin/env" ]] && . "$HOME/.local/bin/env"
+export PATH="$HOME/bin:$PATH"
+
+# bun (optional)
+export BUN_INSTALL="$HOME/.bun"
+[[ -d "$BUN_INSTALL/bin" ]] && export PATH="$BUN_INSTALL/bin:$PATH"
+[[ -s "$BUN_INSTALL/_bun" ]] && source "$BUN_INSTALL/_bun"

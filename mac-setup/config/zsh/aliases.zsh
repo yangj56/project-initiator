@@ -1,0 +1,7 @@
+alias ls="eza"
+alias ll="eza -la"
+alias la="eza -a"
+alias cat="bat"
+alias code="cursor"
+alias gs="git status"
+alias gp="git pull --rebase"

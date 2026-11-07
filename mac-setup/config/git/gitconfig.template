@@ -1,0 +1,13 @@
+[user]
+	# name = Your Name
+	# email = your@email.com
+
+[init]
+	defaultBranch = main
+
+[core]
+	editor = cursor --wait
+	excludesfile = ~/.gitignore_global
+
+[pull]
+	rebase = true

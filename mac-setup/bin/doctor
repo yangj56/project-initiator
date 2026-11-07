@@ -1,0 +1,45 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+# Ensure brew and nvm are available (doctor often runs in bash, so .zshrc isn't loaded)
+if [[ -x /opt/homebrew/bin/brew ]]; then
+  eval "$(/opt/homebrew/bin/brew shellenv)"
+elif [[ -x /usr/local/bin/brew ]]; then
+  eval "$(/usr/local/bin/brew shellenv)"
+fi
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+[[ -s "$(brew --prefix nvm 2>/dev/null)/nvm.sh" ]] && source "$(brew --prefix nvm)/nvm.sh" 2>/dev/null || true
+
+echo "🩺 Dotfiles Doctor"
+echo "------------------"
+
+check() {
+  command -v "$1" >/dev/null 2>&1 && echo "✔ $1: $($2)" || echo "✘ $1 missing"
+}
+
+check brew "brew --version | head -n1"
+check git "git --version"
+
+if git config --global user.name >/dev/null 2>&1 && git config --global user.email >/dev/null 2>&1; then
+  echo "✔ git identity: $(git config --global user.name) <$(git config --global user.email)>"
+else
+  echo "⚠ git user.name / user.email not set (edit config/git/gitconfig)"
+fi
+check node "node -v"
+check nvm "nvm --version"
+check docker "docker --version"
+check gh "gh --version | head -n1"
+check jq "jq --version"
+check kubectl "kubectl version --client 2>/dev/null | head -n1"
+check helm "helm version --short"
+check terraform "terraform version | head -n1"
+check az "az version 2>/dev/null | head -n1"
+check fzf "fzf --version | head -n1"
+check autojump "autojump --version"
+
+[[ -L "$HOME/.zshrc" ]] && echo "✔ .zshrc symlinked" || echo "⚠ .zshrc not symlinked"
+[[ -L "$HOME/.gitconfig" ]] && echo "✔ .gitconfig symlinked" || echo "⚠ .gitconfig not symlinked"
+[[ -d "$HOME/.oh-my-zsh" ]] && echo "✔ Oh My Zsh installed" || echo "✘ Oh My Zsh missing"
+
+echo "------------------"
+echo "Doctor check complete"

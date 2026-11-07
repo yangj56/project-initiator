@@ -1,0 +1,31 @@
+#!/usr/bin/env bash
+# Symlink a file from dotfiles into $HOME, backing up existing file if present.
+set -euo pipefail
+
+if [ $# -ne 2 ]; then
+  echo "Usage: link <source> <dest>" >&2
+  exit 1
+fi
+
+src="$1"
+dest="$2"
+
+if [ ! -e "$src" ]; then
+  echo "Source does not exist: $src" >&2
+  exit 1
+fi
+
+mkdir -p "$(dirname "$dest")"
+
+if [ -e "$dest" ] || [ -L "$dest" ]; then
+  if [ "$(readlink "$dest")" = "$src" ]; then
+    echo "Already linked: $dest -> $src"
+    exit 0
+  fi
+  backup="${dest}.backup.$(date +%Y%m%d%H%M%S)"
+  echo "Backing up existing: $dest -> $backup"
+  mv "$dest" "$backup"
+fi
+
+ln -sf "$src" "$dest"
+echo "Linked: $dest -> $src"

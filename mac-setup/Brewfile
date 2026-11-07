@@ -1,0 +1,33 @@
+tap "hashicorp/tap"
+tap "fluxcd/tap"
+
+brew "git"
+brew "gh"
+brew "jq"
+brew "fzf"
+brew "ripgrep"
+brew "bat"
+brew "eza"
+
+brew "nvm"
+brew "autojump"
+brew "dotnet"
+brew "azure-cli"
+brew "hashicorp/tap/terraform"
+brew "fluxcd/tap/flux"
+brew "kubectl"
+brew "postgresql"
+brew "helm"
+
+brew "zsh-autosuggestions"
+brew "zsh-syntax-highlighting"
+
+brew "uv"
+
+cask "cursor"
+cask "codex"
+cask "claude-code"
+cask "docker-desktop"
+cask "flycut"
+cask "beekeeper-studio"
+cask "bruno"
