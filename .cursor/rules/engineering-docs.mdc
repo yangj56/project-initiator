@@ -1,0 +1,14 @@
+---
+description: Authoritative engineering docs live in .ai/; the scaffold rules live in template/.ai/
+alwaysApply: true
+---
+
+# Engineering docs (auto-loaded)
+
+This repository is the `project-initiator` package.
+
+Read [`.ai/AGENTS.md`](../../.ai/AGENTS.md) and the spec at `docs/superpowers/specs/2026-11-07-project-initiator-design.md`.
+
+The Next.js App Router, action, and Zod rules copied into new apps live in [`template/.ai/AGENTS.md`](../../template/.ai/AGENTS.md).
+
+Do not `git commit` or `git push`. The user does that.

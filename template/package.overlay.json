@@ -1,0 +1,42 @@
+{
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "format": "prettier --write .",
+    "format:check": "prettier --check .",
+    "check": "npm run typecheck && npm run lint && npm run format:check && npm run test",
+    "test": "vitest run",
+    "drizzle:generate": "drizzle-kit generate --config drizzle.config.ts",
+    "drizzle:check": "drizzle-kit check --config drizzle.config.ts",
+    "drizzle:studio": "drizzle-kit studio --config drizzle.config.ts",
+    "db:local": "docker compose up -d --wait",
+    "db:local:down": "docker compose down",
+    "test:e2e": "playwright test",
+    "perf": "k6 run perf/k6/smoke.js",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.{js,jsx,mjs,cjs,ts,tsx,json,css}": "prettier --write"
+  },
+  "dependencies": [
+    "@aws-sdk/client-s3",
+    "@aws-sdk/s3-request-presigner",
+    "@t3-oss/env-nextjs",
+    "drizzle-orm",
+    "pg",
+    "server-only",
+    "zod"
+  ],
+  "devDependencies": [
+    "@playwright/test",
+    "@types/node",
+    "@types/pg",
+    "dotenv",
+    "drizzle-kit",
+    "eslint-config-prettier",
+    "husky",
+    "lint-staged",
+    "prettier",
+    "tsx",
+    "vitest"
+  ]
+}

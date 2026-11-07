@@ -1,0 +1,26 @@
+.next
+node_modules
+out
+build
+package-lock.json
+public
+
+# Markdown is not part of the format:check gate
+*.md
+
+# Stitch HTML prototypes (reference only; not part of app CI)
+stitch_xcollation_data_manager/
+
+# Design companion + DS drop (reference only; not part of app CI)
+xcontestui/
+design/
+
+# Planning / OpenSpec artifacts (not application source)
+docs/
+openspec/
+
+# Drizzle Kit snapshots / journal (generated; kit does not Prettier-format)
+drizzle/meta/
+
+# Load-test reports (generated, gitignored)
+perf/results/

@@ -1,0 +1,29 @@
+{
+  "description": "Deny agent git commit and git push.",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/template/scripts/agent-git-guard.mjs\" codex",
+            "timeout": 10,
+            "statusMessage": "Checking git policy"
+          }
+        ]
+      },
+      {
+        "matcher": "mcp__",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node \"$(git rev-parse --show-toplevel)/template/scripts/agent-git-guard.mjs\" codex",
+            "timeout": 10,
+            "statusMessage": "Checking git policy"
+          }
+        ]
+      }
+    ]
+  }
+}

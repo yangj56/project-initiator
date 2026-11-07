@@ -1,0 +1,27 @@
+{
+  "name": "project-initiator",
+  "version": "0.1.0",
+  "description": "Scaffold a Next.js app on Vercel with Tailwind, shadcn, Drizzle, Postgres, S3, Playwright, k6, Zod, and agent git guards.",
+  "type": "module",
+  "bin": {
+    "project-initiator": "./src/cli.mjs"
+  },
+  "files": [
+    "src/cli.mjs",
+    "src/create-next.mjs",
+    "src/overlay.mjs",
+    "src/merge-package.mjs",
+    "src/prompt.mjs",
+    "template"
+  ],
+  "engines": {
+    "node": ">=24"
+  },
+  "scripts": {
+    "test": "vitest run"
+  },
+  "devDependencies": {
+    "vitest": "^5.0.5",
+    "zod": "^4.6.7"
+  }
+}

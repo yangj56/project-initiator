@@ -1,0 +1,10 @@
+---
+description: Authoritative engineering docs live in .ai/; start with .ai/AGENTS.md
+alwaysApply: true
+---
+
+# Engineering docs (auto-loaded)
+
+Treat **`.ai/`** as authoritative for this repo. Read and follow [`.ai/AGENTS.md`](../../.ai/AGENTS.md). Do not contradict those docs unless the user explicitly allows an exception.
+
+Repo root **`AGENTS.md`** points at `.ai/`.

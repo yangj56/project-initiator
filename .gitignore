@@ -1,0 +1,16 @@
+node_modules/
+dist/
+coverage/
+.DS_Store
+*.log
+.env
+.env.*
+!.env.sample
+!.env.*.sample
+.vercel
+*.tsbuildinfo
+.data/
+uploads/
+.next/
+out/
+.codegraph/
