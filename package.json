@@ -1,6 +1,6 @@
 {
   "name": "project-initiator",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "Scaffold a Next.js app on Vercel with Tailwind, shadcn, Drizzle, Postgres, S3, Playwright, k6, Zod, and agent git guards.",
   "license": "MIT",
   "type": "module",

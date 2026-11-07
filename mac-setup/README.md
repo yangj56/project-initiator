@@ -4,7 +4,7 @@ Clean Mac dev setup: **Oh My Zsh**, **nvm**, **Cursor**, **Docker Desktop**, and
 
 **What you get**
 
-- **Oh My Zsh** + `robbyrussell` theme
+- **Homebrew zsh** (current stable; macOS `/bin/zsh` stays as the fallback) + **Oh My Zsh** `robbyrussell` theme
 - Git autocomplete + autosuggestions
 - **nvm** + Node 24
 - **Cursor** (main IDE + terminal)
@@ -71,9 +71,9 @@ doctor
 ```
 
 - **`bootstrap.sh`** — Installs Homebrew (if needed), sets up PATH, and generates `config/git/gitconfig` from the template if it doesn’t exist.
-- **`install.sh`** — Runs `brew bundle`, installs Oh My Zsh, symlinks `.zshrc`, `.gitconfig`, `.gitignore_global`, and installs Node 24 via nvm.
+- **`install.sh`** — Updates Homebrew, runs `brew bundle`, upgrades zsh, installs Oh My Zsh, symlinks `.zshrc`, `.gitconfig`, `.gitignore_global`, registers Homebrew zsh as the login shell, and installs Node 24 via nvm.
 - **`exec zsh`** — Reloads your shell so the new config is active.
-- **`doctor`** — Checks that brew, git, node, nvm, docker, fzf, autojump, Oh My Zsh, and symlinks are present.
+- **`doctor`** — Checks that brew, zsh, git, node, nvm, docker, fzf, autojump, Oh My Zsh, and symlinks are present.
 
 ---
 

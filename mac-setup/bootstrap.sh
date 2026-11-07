@@ -9,8 +9,11 @@ fi
 
 if [[ -x /opt/homebrew/bin/brew ]]; then
   eval "$(/opt/homebrew/bin/brew shellenv)"
-else
+elif [[ -x /usr/local/bin/brew ]]; then
   eval "$(/usr/local/bin/brew shellenv)"
+else
+  echo "Homebrew is not available. Install it from https://brew.sh and re-run." >&2
+  exit 1
 fi
 
 # Generate gitconfig from template if it doesn't exist (ignored by git)

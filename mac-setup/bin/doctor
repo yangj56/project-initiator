@@ -14,10 +14,27 @@ echo "🩺 Dotfiles Doctor"
 echo "------------------"
 
 check() {
-  command -v "$1" >/dev/null 2>&1 && echo "✔ $1: $($2)" || echo "✘ $1 missing"
+  # Run through bash so version commands can use pipes (`brew --version | head -n1`).
+  if command -v "$1" >/dev/null 2>&1; then
+    echo "✔ $1: $(bash -c "$2")"
+  else
+    echo "✘ $1 missing"
+  fi
 }
 
 check brew "brew --version | head -n1"
+check zsh "zsh --version"
+if command -v brew >/dev/null 2>&1 && [[ -x "$(brew --prefix)/bin/zsh" ]]; then
+  brew_zsh="$(brew --prefix)/bin/zsh"
+  echo "✔ Homebrew zsh: $("$brew_zsh" --version) ($brew_zsh)"
+  if [[ "${SHELL:-}" == "$brew_zsh" ]]; then
+    echo "✔ login shell is Homebrew zsh"
+  else
+    echo "⚠ login shell is ${SHELL:-unset}; run: chsh -s $brew_zsh"
+  fi
+else
+  echo "✘ Homebrew zsh missing"
+fi
 check git "git --version"
 
 if git config --global user.name >/dev/null 2>&1 && git config --global user.email >/dev/null 2>&1; then
